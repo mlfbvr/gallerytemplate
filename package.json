@@ -1,0 +1,22 @@
+{
+  "name": "gallerytemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build_css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "watch": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "copy_html": "mkdir -p dist && cp src/mainindex.html src/albumindex.html dist/",
+    "done": "echo \"Bashgallery template built successfully in dist/.\"",
+    "build": "npm run clean && npm run build_css && npm run copy_html && npm run done"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
